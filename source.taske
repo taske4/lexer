@@ -1,0 +1,5 @@
+#msg = "an any message";
+output(#msg);
+
+#calc = 10 * 10;
+output(#calc);
