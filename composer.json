@@ -1,0 +1,20 @@
+{
+  "name": "vendor_name/lexer",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "taske4",
+      "email": "taske4@taske4.com"
+    }
+  ],
+  "require": {
+    
+  },
+  "autoload": {
+    "psr-4": {
+      "app\\": ""
+    }
+  }
+}
