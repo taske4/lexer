@@ -3,3 +3,5 @@ output(#msg);
 
 #calc = 10 * 10;
 output(#calc);
+#flag = true;
+#flag = false;

@@ -24,7 +24,10 @@ class Main
             throw new \Exception('Err: 1');
         }
 
+        $lexer = new Lexer($arResult);
+        $arResult = $lexer->lexer();
 
+//        var_dump($arResult);
 
         return true;
     }
