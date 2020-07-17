@@ -16,6 +16,7 @@ class Lexer implements LexerInterface
             'match operator' => '\+|-|\*|%',
             'function' => '\w+\((.+\))',
             'int' => '\d+',
+            'float' => '\d+\.\d+',
             'bool' => 'true|false',
             'unknown' => '.+',
         ];
@@ -30,11 +31,11 @@ class Lexer implements LexerInterface
     {
         $arResult = [];
 
-        foreach ($this->arContents as $arInstruction) {
+        foreach ($this->arContents as $index => $arInstruction) {
             foreach ($arInstruction as $piece) {
                 foreach ($this->arTokens as $token => $pattern) {
-                    if (preg_match("/^${pattern}$/", trim($piece), $matches) === 1) {
-                        $arResult[] = [
+                    if (preg_match("/^${pattern}$/", trim($piece)) === 1) {
+                        $arResult[$index][] = [
                             $token => trim($piece)
                         ];
                         break;

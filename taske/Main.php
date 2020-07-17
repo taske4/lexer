@@ -27,7 +27,7 @@ class Main
         $lexer = new Lexer($arResult);
         $arResult = $lexer->lexer();
 
-//        var_dump($arResult);
+        var_dump($arResult);
 
         return true;
     }
